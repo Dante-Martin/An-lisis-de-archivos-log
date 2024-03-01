@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .drag_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: grey;
+            width: 450px;
+            height: 300px;
+        }
+
+        .drag_area>p {
+            display: inline-block;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="drag_area" id="drag_area">
+        <p>Arrastre archivos aqui...</p>
+    </div>
+
+    <div class="container">
+        <h2>Striped Rows</h2>
+        <p>The .table-striped class adds zebra-stripes to a table:</p>
+        <table class="table table-striped" id="ficha">
+            <thead>
+                <th>Fecha </th>
+                <th>Hora</th>
+                <th>Dirección IP del cliente</th>
+                <th>Método de solicitud</th>
+                <th>URL solicitada</th>
+                <th>Puerto del servidor web</th>
+                <th>Usuario</th>
+                <th>Agente de usuario</th>
+                <th>Código de estado HTTP</th>
+                <th>Tamaño de la respuesta</th>
+                <th>Tiempo de carga de la página</th>
+                <th>Tiempo total de procesamiento de la solicitud</th>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+    </div>
+
+
+    </table>
+    <script>
+        window.onload = () => {
+
+            const dragArea = document.getElementById("drag_area");
+
+            function dropHandler(ev) {
+
+                // Evitar el comportamiendo por defecto (Evitar que el fichero se abra/ejecute)
+                ev.preventDefault();
+                const loLeido = [];
+
+                if (ev.dataTransfer.items) {
+                    // Usar la interfaz DataTransferItemList para acceder a el/los archivos)
+                    for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+                        // Si los elementos arrastrados no son ficheros, rechazarlos
+                        if (ev.dataTransfer.items[i].kind === 'file') {
+                            loLeido.push(ev.dataTransfer.items[i].getAsFile());
+                        }
+                    }
+                } else {
+
+                    // Usar la interfaz DataTransfer para acceder a el/los archivos
+                    for (let i = 0; i < ev.dataTransfer.files.length; i++) {
+                        loLeido.push(ev.dataTransfer.files[i]);
+                    }
+                }
+
+                //Llamamos a la funcion que se encarga de leer los archivos
+                leerArchivo(loLeido);
+
+                // Pasar el evento a removeDragData para limpiar
+                removeDragData(ev);
+            }
+
+            function removeDragData(ev) {
+                if (ev.dataTransfer.items) {
+                    // Use DataTransferItemList interface to remove the drag data
+                    ev.dataTransfer.items.clear();
+                } else {
+                    // Use DataTransfer interface to remove the drag data
+                    ev.dataTransfer.clearData();
+                }
+            }
+
+            function dragOverHandler(ev) {
+                ev.preventDefault();
+            }
+
+            function leerArchivo(archivos) {
+
+                if (!archivos) alert('No se selecciono ningun archivo');
+                contenidoHtml = document.getElementById("contenido");
+                let puntero = 1;
+                li = document.createElement("li");
+                let table = document.getElementById("ficha");
+
+
+
+                archivos.forEach(archivo => {
+                    const lector = new FileReader();
+
+                    lector.onload = e => {
+                        let contenido = e.target.result;
+                        var lines = contenido.split(/[\r\n]+/g);// para salto de linea en todo el texto
+                        console.log(typeof (lines))
+                        //console.log(lines[2].charAt(2))
+
+
+
+                        for (var i = 0; i < lines.length; i++) {
+
+                            if (lines[i].charAt(0) != "#") {
+
+                                //console.log(lines[i]);
+
+                                let tr = document.createElement("tr");
+                                let td = document.createElement("td");
+                                td.style.color = "#AA00AA";
+                                td.style.width = "18px";
+                                td.innerHTML = lines[i];
+                                tr.appendChild(td);
+                                table.appendChild(tr);
+
+                                //console.log(lines[i].substring(0, 9))//sustrae todas las fechas
+
+                                // Expresión regular para encontrar fechas en el formato yyyy-mm-dd o dd/mm/yyyy
+                                var regex = /\b\d{4}-\d{2}-\d{2}\b|\b\d{2}\/\d{2}\/\d{4}\b/g;
+
+                                // Utilizamos el método match() para encontrar todas las coincidencias con la expresión regular
+                                var fechasEncontradas = lines[i].match(regex);
+
+                                // Imprimimos las fechas encontradas
+                                console.log("Fechas encontradas:", fechasEncontradas);
+                            }
+
+                        }
+                    };
+
+                    lector.readAsText(archivo);
+                });
+            }
+
+            dragArea.addEventListener("drop", dropHandler);
+            dragArea.addEventListener("dragover", dragOverHandler);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
