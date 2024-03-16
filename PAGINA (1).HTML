@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
@@ -32,32 +33,15 @@
         <p>Arrastre archivos aqui...</p>
     </div>
 
-    <div class="container">
-        <h2>Striped Rows</h2>
-        <p>The .table-striped class adds zebra-stripes to a table:</p>
-        <table class="table table-striped" id="ficha">
-            <thead>
-                <th>Fecha </th>
-                <th>Hora</th>
-                <th>Dirección IP del cliente</th>
-                <th>Método de solicitud</th>
-                <th>URL solicitada</th>
-                <th>Puerto del servidor web</th>
-                <th>Usuario</th>
-                <th>Agente de usuario</th>
-                <th>Código de estado HTTP</th>
-                <th>Tamaño de la respuesta</th>
-                <th>Tiempo de carga de la página</th>
-                <th>Tiempo total de procesamiento de la solicitud</th>
-            </thead>
-            <tbody id="tbody">
-
-            </tbody>
-    </div>
+    <div id="tabla">
+    </div> 
 
 
     </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
     <script>
+        
         window.onload = () => {
 
             const dragArea = document.getElementById("drag_area");
@@ -111,20 +95,45 @@
 
         };
         function MostrarEnTabla(que) {
-            contenidoHtml = document.getElementById("contenido");
-            li = document.createElement("li");
-            let table = document.getElementById("ficha");
 
-            let tr = document.createElement("tr");
-            let td = document.createElement("td");
-            td.style.color = "#AA00AA";
-            td.style.width = "18px";
-            td.innerHTML = que;
-            tr.appendChild(td);
-            table.appendChild(tr);
+            ()  => {
+                const wrapper = useRef(null);
+  
+                useEffect(() => {
+                new gridjs.Grid({
+                columns: ["Hora"],
+                pagination: true,
+                data: [que]
+                }).render(wrapper.current);
+                setTimeout(() => {
+                // lets update the config
+                grid.updateConfig({
+                search: true,
+                data: [que].forceRender(),
+                    }, 2000);
+                    }, []);
+
+                    return (
+                    <div ref={wrapper} />
+                        );
+                }
+
+                        
+                // contenidoHtml = document.getElementById("contenido");
+                // li = document.createElement("li");
+                // let table = document.getElementById("ficha");
+
+                // let tr = document.createElement("tr");
+                // let td = document.createElement("td");
+                // td.style.color = "#AA00AA";
+                // td.style.width = "18px";
+                // td.innerHTML = que;
+                // tr.appendChild(td);
+                // table.appendChild(tr);
 
 
         }
+    }
         function leerArchivo(archivos) {
 
             if (!archivos) alert('No se selecciono ningun archivo');
@@ -153,6 +162,7 @@
 
                             MostrarEnTabla(lines[i]);
 
+                            console.log(lines[i])
                             //console.log(lines[i].substring(0, 9))//sustrae todas las fechas
 
                             // Expresión regular para encontrar fechas en el formato yyyy-mm-dd o dd/mm/yyyy
@@ -172,7 +182,7 @@
             });
         }
 
-
+        
     </script>
 </body>
 
