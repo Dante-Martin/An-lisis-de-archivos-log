@@ -126,43 +126,92 @@
 
         }
         function leerArchivo(archivos) {
-
+            let fecha;
+            let Hora;
+            let accion;
+            let direcciondestino;
+            let puertodestino;
+            let respuestaNavegador;
+            let respuestaPuerto;
+            let respuestaT1;
+            let respuestaT2;
+            let respuestaT3;
+            function marcarerror() {
+                fecha = "Err";
+                Hora = "Err";
+                accion = "Err";
+                direcciondestino = "Err";
+                puertodestino = "Err";
+                respuestaNavegador = "Err";
+                respuestaPuerto = "Err";
+                respuestaT1 = "Err";
+                respuestaT2 = "Err";
+                respuestaT3 = "Err";
+            }
             if (!archivos) alert('No se selecciono ningun archivo');
-
-            let puntero = 1;
-
-
-
-
             archivos.forEach(archivo => {
                 const lector = new FileReader();
-
                 lector.onload = e => {
                     let contenido = e.target.result;
                     var lines = contenido.split(/[\r\n]+/g);// para salto de linea en todo el texto
-                    console.log(typeof (lines));
-                    //console.log(lines[2].charAt(2))
-
-
-
+                    //console.log(typeof (lines));
+                    let splitarray;
+                    let aux;
                     for (var i = 0; i < lines.length; i++) {
 
-                        if (lines[i].charAt(0) != "#") {
-
-                            //console.log(lines[i]);
-
-                            MostrarEnTabla(lines[i]);
-
-                            //console.log(lines[i].substring(0, 9))//sustrae todas las fechas
+                        if (lines[i].charAt(0) != "#" & lines[i].length > 10) {
 
                             // Expresión regular para encontrar fechas en el formato yyyy-mm-dd o dd/mm/yyyy
-                            var regex = /\b\d{4}-\d{2}-\d{2}\b|\b\d{2}\/\d{2}\/\d{4}\b/g;
+                            //var regex = /\b\d{4}-\d{2}-\d{2}\b|\b\d{2}\/\d{2}\/\d{4}\b/g;
 
                             // Utilizamos el método match() para encontrar todas las coincidencias con la expresión regular
-                            var fechasEncontradas = lines[i].match(regex);
+                            //var fechasEncontradas = lines[i].match(regex);
 
                             // Imprimimos las fechas encontradas
-                            console.log("Fechas encontradas:", fechasEncontradas);
+                            //console.log("Fechas encontradas:", fechasEncontradas);
+
+                            splitarray = lines[i].split("::1");
+                            try {
+                                aux = splitarray[0].trim().split(" ");
+                                fecha = aux[0];
+                                Hora = aux[1];
+
+                            } catch (error) {
+                                marcarerror();
+                            }
+                            try {
+                                aux = splitarray[1].trim().split(" ");
+                                accion = aux[0];
+                                direcciondestino = aux[1];
+                                puertodestino = aux[3];
+                            } catch (error) {
+                                marcarerror();
+                            }
+                            try {
+                                aux = splitarray[2].trim().split(" ");
+                                respuestaNavegador = aux[0];
+                                respuestaPuerto = aux[2];
+                                respuestaT1 = aux[3];
+                                respuestaT2 = aux[4];
+                                respuestaT3 = aux[5];
+                            } catch (error) {
+                                marcarerror();
+                            }
+
+                            // console.log("--->", splitarray[0]);
+                            // console.log("  fecha:", fecha);
+                            // console.log("  Hora: ", Hora);
+                            // console.log("--->", splitarray[1]);
+                            // console.log("  accion;: ", accion);
+                            // console.log("  direcciondestino: ", direcciondestino);;
+                            // console.log("  puertodestino: ", puertodestino);;
+                            // console.log("--->", splitarray[2]);
+                            // console.log("  respuestaNavegador: ", respuestaNavegador);;
+                            // console.log("  respuestaPuerto: ", respuestaPuerto);;
+                            // console.log("  respuestaT1: ", respuestaT1);;
+                            // console.log("  respuestaT2: ", respuestaT2);;
+                            // console.log("  respuestaT3: ", respuestaT3);;
+
                         }
 
                     }
