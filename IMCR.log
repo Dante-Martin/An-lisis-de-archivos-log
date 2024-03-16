@@ -1,0 +1,46 @@
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2021-04-30 14:55:37
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2021-04-30 14:55:37 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 1530
+2021-04-30 14:55:55 ::1 GET /WeigherLeatherWS/api/WeightPallet - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 4
+2021-04-30 14:55:55 ::1 GET /favicon.ico - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 http://localhost/WeigherLeatherWS/api/WeightPallet 404 0 2 3
+2021-04-30 14:56:29 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 0
+2021-04-30 14:57:02 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 0
+2021-04-30 14:57:40 ::1 GET / - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 200 0 0 0
+2021-04-30 14:57:40 ::1 GET /iisstart.png - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 http://localhost/ 200 0 0 9
+2021-04-30 14:58:17 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 1
+2021-04-30 14:58:38 ::1 GET /WeigherLeatherWS/api/WeightPallet - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 2
+2021-04-30 14:58:38 ::1 GET /favicon.ico - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS/api/WeightPallet 404 0 2 0
+2021-04-30 14:59:17 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 1
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2021-04-30 15:03:08
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2021-04-30 15:03:08 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.93+Safari/537.36 - 500 19 33 1245
+2021-04-30 15:06:22 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 2
+2021-04-30 15:06:22 ::1 GET /favicon.ico - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 404 0 2 67
+2021-04-30 15:10:43 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 2
+2021-04-30 15:10:43 ::1 GET /favicon.ico - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 404 0 2 0
+2021-04-30 15:12:27 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 2
+2021-04-30 15:26:13 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 1
+2021-04-30 15:26:13 ::1 GET /favicon.ico - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 404 0 2 0
+2021-04-30 15:26:24 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 500 19 33 0
+2021-04-30 15:38:41 ::1 GET /WeigherLeatherWS - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 13278
+2021-04-30 15:38:41 ::1 GET /WeigherLeatherWS/bundles/modernizr v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 200 0 0 22
+2021-04-30 15:38:41 ::1 GET /WeigherLeatherWS/Content/css v=fd5y8-7ZPYUJ8STqdssF29NWglxw9qUJxJR2urhcAhk1 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 200 0 0 34
+2021-04-30 15:38:41 ::1 GET /WeigherLeatherWS/bundles/bootstrap v=M4Nk6kIOwMFflsEKET0iPL9i5YBqbzMzvUOrd8gyCnw1 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 200 0 0 23
+2021-04-30 15:38:41 ::1 GET /WeigherLeatherWS/bundles/jquery v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 200 0 0 24
+2021-04-30 15:38:46 ::1 GET /WeigherLeatherWS/Help - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS 200 0 0 1064
+2021-04-30 15:38:46 ::1 GET /WeigherLeatherWS/Areas/HelpPage/HelpPage.css - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 http://localhost/WeigherLeatherWS/Help 200 0 0 11
+2021-04-30 15:39:23 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 726
+2021-04-30 15:40:58 ::1 GET /WeigherLeathrerWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 404 0 2 43
+2021-04-30 15:41:15 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 446
+2021-04-30 15:41:30 ::1 OPTIONS /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 6
+2021-04-30 15:41:30 ::1 POST /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 246
+2021-04-30 15:42:12 ::1 OPTIONS /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 1
+2021-04-30 15:42:12 ::1 POST /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 17
+2021-04-30 15:42:19 ::1 OPTIONS /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 0
+2021-04-30 15:42:19 ::1 POST /WeigherLeatherWS/api/WeightPallet/SetWeight - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 88
+2021-04-30 15:42:22 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetWeight Nro=12 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 29
+2021-04-30 15:42:31 ::1 GET /WeigherLeatherWS/api/WeightPallet/GetStatusDB - 80 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/90.0.4430.85+Safari/537.36+Edg/90.0.818.49 - 200 0 0 1
